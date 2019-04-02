@@ -11,7 +11,7 @@ const styles ={
 const SideBar = (props) => (
     <div>
         <Drawer
-            open={true}
+            open={false} // true się pojawia side bar 
             onClose={() => console.log('Toggle')}
         >
             <div style={styles.drawer}>
