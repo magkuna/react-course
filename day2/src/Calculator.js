@@ -1,7 +1,7 @@
 import React from 'react'
 import Add from './Add'
 import Divide from './Divide'
-import Substract from './Substract'
+import Subtract from './Subtract'
 
 const Calculator = (props) => (
     <div>
@@ -16,7 +16,7 @@ const Calculator = (props) => (
         <Divide
             a={props.a}
             b={props.b} />
-        <Substract
+        <Subtract
             a={props.a}
             b={props.b}
         />

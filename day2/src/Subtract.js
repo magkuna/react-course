@@ -2,11 +2,11 @@ import React from 'react'
 
 
 
-const Substract = (props) => (
+const Subtract = (props) => (
     <p>
         Ich różnica to: {props.a - props.b}
     </p>
 
 )
 
-export default Substract
+export default Subtract
