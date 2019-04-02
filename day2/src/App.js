@@ -7,17 +7,19 @@ import Calculators from './views/Calculators'
 import Home from './views/Home'
 import DisplayName from './views/DisplayName'
 import MUIPlayground from './views/MUIPlayground'
+import Navigation from './views/Navigation'
 
 const App = () => {
   return (
     <Router>
+      <Navigation />
       <div>
         <ul>
           <li>
             <Link to="/">Home</Link>
           </li>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/calculators">Calculators</Link>
             </li>
              <li>
             <Link to="/mui">MUI Playgrounds</Link>
