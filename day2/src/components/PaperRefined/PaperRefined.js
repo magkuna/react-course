@@ -2,20 +2,25 @@ import React from 'react'
 
 import Paper from '@material-ui/core/Paper'
 
-const PaperRefined = (props) => (
+const PaperRefined = (props) => {
+  let childrenToRender = null
+
+  if(props.doNotDisplayChildren){
+    childrenToRender = null
+  }else{
+    childrenToRender = props.children
+  }
+
+  return (
     <Paper
-    style ={{
+      style={{
         margin: '20px',
-        padding:'20px',
-  
-    }}
+        padding: '20px',
+      }}
     >
-    {
-        props.doNotDisplayChildren ? 
-        null
-        :
-        props.children
-        }
+      {childrenToRender}
     </Paper>
-)
+  )
+}
+
 export default PaperRefined
