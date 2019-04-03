@@ -3,7 +3,7 @@ import React from 'react'
 
 const Home = () => (
 <h1>
-    Coś tam
+    Hejka :)
 </h1>
 )
 export default Home

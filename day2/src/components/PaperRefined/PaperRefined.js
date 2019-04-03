@@ -10,6 +10,7 @@ const PaperRefined = (props) => (
   
     }}
     >
+    {props.children}
 
     </Paper>
 )
