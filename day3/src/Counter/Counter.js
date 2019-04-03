@@ -9,11 +9,15 @@ class Counter extends React.Component {
         }
     }
     render() {
-        const inc =() =>{
-            alert('Klik')
+        const inc = () => {
+        this.setState({number:this.state.number + 1}) 
+    }
+        const dec = () => {
+            this.setState({number:this.state.number -1})
         }
+        
         return (
-            <div>
+            <div class ="counter">
                 <h1>
                     {this.state.number}
                 </h1>
@@ -24,6 +28,14 @@ class Counter extends React.Component {
                    
                 >
                     +
+                </Button>
+                <Button
+                    variant={"contained"}
+                    color={"primary"}
+                    onClick={dec}
+                   
+                >
+                    -
                 </Button>
             </div>
         )
