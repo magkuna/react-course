@@ -10,8 +10,12 @@ const PaperRefined = (props) => (
   
     }}
     >
-    {props.children}
-
+    {
+        props.doNotDisplayChildren ? 
+        null
+        :
+        props.children
+        }
     </Paper>
 )
 export default PaperRefined

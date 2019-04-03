@@ -4,7 +4,9 @@ import PaperRefined from '../../components/PaperRefined'
 
 const MUIPlayground = (props) => (
     <div>
-       <PaperRefined>
+       <PaperRefined
+       doNotDisplayChildren={true}
+       >
             <Button
                 variant={"contained"}
                 color={"primary"}
