@@ -9,7 +9,7 @@ const styles ={
 }
 
 const SideBar = (props) => (
-    <div>
+    <div> 
         <Drawer
             open={false} // true się pojawia side bar 
             onClose={() => console.log('Toggle')}

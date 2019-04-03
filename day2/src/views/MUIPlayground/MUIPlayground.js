@@ -10,13 +10,15 @@ const MUIPlayground = (props) => (
             padding:'20px',
         }}
         >
+      
             <Button
                 variant={"contained"}
                 color={"primary"}
                 onClick={() => alert('Klik!')}
             >
                 Primary
-            </Button>
+            </Button> 
+             Tutaj znajduje się sekcja paper
         </Paper>
     </div>
 )
