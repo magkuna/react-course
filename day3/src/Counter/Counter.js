@@ -31,7 +31,7 @@ class Counter extends React.Component {
                 <Button
                     variant={"contained"}
                     color={"primary"}
-                    onClick={()=> this.inc()}
+                    onClick={()=> this.dec()}
                 >
                     -
                 </Button>
