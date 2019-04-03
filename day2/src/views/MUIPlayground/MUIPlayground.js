@@ -5,14 +5,14 @@ import PaperRefined from '../../components/PaperRefined'
 const MUIPlayground = (props) => (
     <div>
        <PaperRefined
-       doNotDisplayChildren={true}
+         doNotDisplayChildren={false}
        >
             <Button
                 variant={"contained"}
-                color={"primary"}
+                color={"secondary"}
                 onClick={() => alert('Klik!')}
             >
-                Primary
+               Buttonek
             </Button> 
         </PaperRefined>
     </div>
