@@ -24,16 +24,14 @@ class Counter extends React.Component {
                 <Button
                     variant={"contained"}
                     color={"secondary"}
-                    onClick={this.inc.bind(this)}
-
+                    onClick={()=> this.inc()}
                 >
                     +
                 </Button>
                 <Button
                     variant={"contained"}
                     color={"primary"}
-                    onClick={this.dec.bind(this)}
-
+                    onClick={()=> this.inc()}
                 >
                     -
                 </Button>
