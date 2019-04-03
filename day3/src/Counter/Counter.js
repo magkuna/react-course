@@ -7,39 +7,37 @@ class Counter extends React.Component {
         this.state = {
             number: 10,
         }
-        this.inc = this.inc.bind(this)
-        this.dec = this.dec.bind(this)
     }
-    
 
-    inc() {
+
+    inc = () =>
         this.setState({ number: this.state.number + 1 })
-    }
-    dec() {
+
+    dec = () =>
         this.setState({ number: this.state.number - 1 })
-    }
-    render() {
-        return (
-            <div class="counter">
-                <h1>
-                    {this.state.number}
-                </h1>
-                <Button
-                    variant={"contained"}
-                    color={"secondary"}
-                    onClick={this.inc}
-                >
-                    +
+
+render() {
+    return (
+        <div class="counter">
+            <h1>
+                {this.state.number}
+            </h1>
+            <Button
+                variant={"contained"}
+                color={"secondary"}
+                onClick={this.inc}
+            >
+                +
                 </Button>
-                <Button
-                    variant={"contained"}
-                    color={"primary"}
-                    onClick={this.dec}
-                >
-                    -
+            <Button
+                variant={"contained"}
+                color={"primary"}
+                onClick={this.dec}
+            >
+                -
                 </Button>
-            </div>
-        )
-    }
+        </div>
+    )
+}
 }
 export default Counter
