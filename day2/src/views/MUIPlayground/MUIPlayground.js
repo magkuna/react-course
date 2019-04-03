@@ -1,16 +1,10 @@
 import React from 'react'
 import Button from '@material-ui/core/Button'
-import Paper from '@material-ui/core/Paper'
+import PaperRefined from '../../components/PaperRefined'
 
 const MUIPlayground = (props) => (
     <div>
-        <Paper
-        style={{
-            margin: '20px',
-            padding:'20px',
-        }}
-        >
-      
+       <PaperRefined>
             <Button
                 variant={"contained"}
                 color={"primary"}
@@ -18,8 +12,7 @@ const MUIPlayground = (props) => (
             >
                 Primary
             </Button> 
-             Tutaj znajduje się sekcja paper
-        </Paper>
+        </PaperRefined>
     </div>
 )
 export default MUIPlayground
