@@ -12,7 +12,8 @@ class Counter extends React.Component {
     dec = () =>
         this.setState({ number: this.state.number - 1 })
 
-
+    reset = () =>
+        this.setState({number: this.props.number})
 
     render() {
         return (
@@ -34,6 +35,12 @@ class Counter extends React.Component {
                 >
                     -
                 </Button>
+                <Button
+                    variant={"contained"}
+                    color={"default"}
+                    onClick={this.reset}
+                >
+                reset</Button>
             </div>
         )
     }
