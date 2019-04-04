@@ -2,11 +2,21 @@ import React from 'react'
 
 import List from '../List'
 
+
 class Users extends React.Component {
-    render(){
-        return(
+    state = {
+        users: null,
+        isLoading: false,
+        isError: false,
+    }
+    render() {
+        return (
             <div>
-                <List />
+                <List 
+                users= {this.state.users}
+                isLoading={this.state.users}
+                isError={this.state.users}
+                />
             </div>
         )
     }

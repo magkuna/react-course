@@ -6,12 +6,7 @@ import NoUsers from './NoUsers'
 import Results from './Results'
 
 class List extends React.Component {
-    state = {
-        users: null,
-        isLoading: false,
-        isError: false,
-    }
-
+    
     componentDidMount() {
         this.setState({ isLoading: true })
 
