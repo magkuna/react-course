@@ -21,28 +21,30 @@ class List extends React.Component {
         return (
             <div>
                 {
-                    this.state.isError ?
+                    this.props.isError ?
                         //'Error'
                         <Error />
                         :
-                        this.state.isLoading ?
+                        this.props.isLoading ?
                             //'Loading'
                             <Loading />
                             :
-                            !this.state.users ?
+                            !this.props.users ?
                                 // 'Data no loaded yet'
                                 <NoLoaded />
                                 :
-                                this.state.users.length === 0 ?
+                                this.props.users.length === 0 ?
                                 //'No users found'
                                 <NoUsers />
                                 :
                                 <Results 
-                                data={this.state.users}
+                                data={this.props.users}
                                 />
                 }
             </div>
         )
     }
 }
+
+
 export default List

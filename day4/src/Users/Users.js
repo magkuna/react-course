@@ -14,8 +14,8 @@ class Users extends React.Component {
             <div>
                 <List 
                 users= {this.state.users}
-                isLoading={this.state.users}
-                isError={this.state.users}
+                isLoading={this.state.isLoading}
+                isError={this.state.isError}
                 />
             </div>
         )
