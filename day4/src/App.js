@@ -1,14 +1,12 @@
 import React from 'react'
-import List from './List'
+import Users from './Users'
 
 //import Calculator from './Calculator'
 
 
 const App = (props) => (
   <div>
-    <List />  
-
-
+    <Users />  
 
   {/* <Calculator />*/}
   </div>
