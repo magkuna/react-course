@@ -21,18 +21,27 @@ class Users extends React.Component {
             .catch(() => this.setState({ isError: true }))
             .finally(() => this.setState({ isLoading: false }))
     }
-    searchTermChange = event => this.setState({ searchTerm:(event.target.value) })
+    searchTermChange = event => this.setState({ searchTerm: (event.target.value) })
 
     render() {
+        const filteredUsers = (
+            this.state.users &&
+            this.state.users.filter &&
+            this.state.users.filter(
+                () => true
+            )
+        )
+
+
         return (
             <div>
-                <Search 
-                searchTerm ={this.state.searchTerm} 
-                searchTermChange ={this.searchTermChange}/>
-                <List 
-                users= {this.state.users}
-                isLoading={this.state.isLoading}
-                isError={this.state.isError}
+                <Search
+                    searchTerm={this.state.searchTerm}
+                    searchTermChange={this.searchTermChange} />
+                <List
+                    users={filteredUsers}
+                    isLoading={this.state.isLoading}
+                    isError={this.state.isError}
                 />
             </div>
         )
