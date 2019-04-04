@@ -7,30 +7,30 @@ import Results from './Results'
 
 const List = (props) => (
 
-            <div>
-                {
-                    props.isError ?
-                        //'Error'
-                        <Error />
+    <div>
+        {
+            props.isError ?
+                //'Error'
+                <Error />
+                :
+                props.isLoading ?
+                    //'Loading'
+                    <Loading />
+                    :
+                    !props.users ?
+                        // 'Data no loaded yet'
+                        <NoLoaded />
                         :
-                        props.isLoading ?
-                            //'Loading'
-                            <Loading />
+                        props.users.length === 0 ?
+                            //'No users found'
+                            <NoUsers />
                             :
-                            !props.users ?
-                                // 'Data no loaded yet'
-                                <NoLoaded />
-                                :
-                                props.users.length === 0 ?
-                                //'No users found'
-                                <NoUsers />
-                                :
-                                <Results 
+                            <Results
                                 data={props.users}
-                                />
-                }
-            </div>
-        )
+                            />
+        }
+    </div>
+)
 
 
 export default List

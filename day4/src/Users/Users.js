@@ -1,6 +1,7 @@
 import React from 'react'
 
 import List from '../List'
+import Search from '../Search'
 
 
 class Users extends React.Component {
@@ -8,6 +9,7 @@ class Users extends React.Component {
         users: null,
         isLoading: false,
         isError: false,
+        searchTerm: ''
     }
 
     componentDidMount() {
@@ -19,9 +21,14 @@ class Users extends React.Component {
             .catch(() => this.setState({ isError: true }))
             .finally(() => this.setState({ isLoading: false }))
     }
+    searchTermChange = event => this.setState({ searchTerm:(event.target.value) })
+
     render() {
         return (
             <div>
+                <Search 
+                searchTerm ={this.state.searchTerm} 
+                searchTermChange ={this.searchTermChange}/>
                 <List 
                 users= {this.state.users}
                 isLoading={this.state.isLoading}
