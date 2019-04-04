@@ -7,7 +7,7 @@ import LifeCycle from './LifeCycle'
 
 const App = (props) => (
     <div>
-        <Router>
+        <Router> 
             <ul>
             <li><Link to="/">HOME</Link></li>
             <li><Link to="/lifecycle">LifeCycle</Link></li>
