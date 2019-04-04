@@ -9,6 +9,16 @@ class Users extends React.Component {
         isLoading: false,
         isError: false,
     }
+
+    componentDidMount() {
+        this.setState({ isLoading: true })
+
+        fetch('https://randomuser.me/api?results=10')
+            .then(r => r.json())
+            .then(data => this.setState({ users: data.results }))
+            .catch(() => this.setState({ isError: true }))
+            .finally(() => this.setState({ isLoading: false }))
+    }
     render() {
         return (
             <div>
